@@ -76,6 +76,25 @@
     loading="lazy">
   </iframe>
 
+  <h1> Click the buttons to switch images</h1>
+<img id="mainImage" src="me-800-by-800.jpg" alt="Gallery Image" width="300">
+<br><br>
+<button onclick="changeImage( 'me-800-by-800.jpg')">Image 1</button>
+<button onclick="changeImage( 'me-300-by-300.jpg')"> Image 2</button>
+<script>
+    function changeImage(imagePath) {
+        document.getElementById("mainImage").src= imagePath;
+    }
+</script>
+
+
+
+
+
+
+
+
+
     </div>
 </body>
 </html>
