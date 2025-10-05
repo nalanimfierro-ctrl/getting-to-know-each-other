@@ -31,11 +31,24 @@
     <p><a href="mailto:nalanimfierro@lewisu.edu">Email Me</a></p>
 
     <p>Add me on Discord: @Nilili1</p>
-    <img src="me-800-by-800.jpg" alt="Picture of Nalani Fierro">
+    <img id="slideshow" src="me-800-by-800.jpg" width="300" />
+
+  <script>
+    const images = [
+      'me-800-by-800.jpg',
+      'me2-test-800.jpg',
+      'group-800-by-800.jpg',
+    ];
+    let currentIndex = 0;
+    const imgElement = document.getElementById('slideshow');
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length; // loop back to start
+      imgElement.src = images[currentIndex];
+    }, 3000); // change image every 10 seconds
+  </script>
     <h2>Introduction</h2>
     <p>My Family and Me: Myself, My younger sister, My mom and dad and our three dogs</p>
-    <p> Lewis major/minor:Aviation Administration and Aviation Flight technology</p>
-       
+    <p> Lewis major/minor:Aviation Administration and Aviation Flight technology</p> 
     <h2>What I hope to Learn in this Course</h2>
     <ul>
         <li>Basics of coding</li>
@@ -53,7 +66,6 @@
     <a href="https://www.britannica.com/sports/swimming-sport" target="_blank">Learn more about Swimming</a> 
     <h2>Fun Fact</h2>
     <p>Fun fact: I got my first tattoo in Hawaii while I was on vacation with my family and I got a Manta Ray and a Shark in polynisan Tribal because I wanted it to symbolize many things while still being one tattoo</p>
-    <h1>Now Playing</h1>
     <!-- Spotify embed for a specific track -->
     <iframe 
         src="https://open.spotify.com/embed/track/6VNXmo59yDYgcwLS17UNAW?utm_source=generator"
@@ -63,15 +75,5 @@
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy">
     </iframe>
-    <h1> Click the buttons to switch images</h1>
-    <img id="mainImage" src="me-800-by-800.jpg" alt="Gallery Image" width="300">
-    <br><br>
-    <button onclick="changeImage( 'me-800-by-800.jpg')">Image 1</button>
-    <button onclick="changeImage( 'me-300-by-300.jpg')"> Image 2</button>
-    <script>
-    function changeImage(imagePath) {
-        document.getElementById("mainImage").src= imagePath;
-    }
-    </script>
 </body>
 </html>
