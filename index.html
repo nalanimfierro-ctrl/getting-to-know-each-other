@@ -60,17 +60,17 @@
     </ul>
             
     <h2>My Favorite Hobby/Activity</h2>
-    <ul>
+    <ol>
         <li> Swimming</li>
         <li>Listening to music</li>
         <li>Drawing/Painting</li>
         <li>Being outside in nature</li>
-    </ul>
+    </ol>
     <a href="https://www.britannica.com/sports/swimming-sport" target="_blank">Learn more about Swimming</a> 
     <h2>Fun Fact</h2>
     <p>Fun fact: I got my first tattoo in Hawaii while I was on vacation with my family and I got a Manta Ray and a Shark in polynisan Tribal because I wanted it to symbolize many things while still being one tattoo</p>
     <!-- Spotify embed for a specific track -->
-    <iframe 
+    <iframe id="spotifyPlayer"
         src="https://open.spotify.com/embed/track/6VNXmo59yDYgcwLS17UNAW?utm_source=generator"
         width="1000"
         height="152" 
@@ -78,5 +78,17 @@
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy">
     </iframe>
+     <script>
+    const tracks = [
+      "https://open.spotify.com/embed/track/6VNXmo59yDYgcwLS17UNAW?utm_source=generator",
+      "https://open.spotify.com/embed/track/709ZIqPHyFOpx2QdjmeWAM?utm_source=generator",
+    ];
+    let currentTrack = 0;
+    const player = document.getElementById("spotifyPlayer");
+    setInterval(() => {
+      currentTrack = (currentTrack + 1) % tracks.length;
+      player.src = tracks[currentTrack];
+    }, 15000); // Change every 15 seconds
+    </script>
 </body>
 </html>
